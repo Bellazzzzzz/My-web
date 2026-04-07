@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bella Zhou | Health Data Science</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <!-- CANVAS BACKGROUND -->
+  <canvas id="canvas"></canvas>
+
+  <div class="container hero-content">
+    <h1>Bella Zhou</h1>
+    <p class="subtitle">
+      Aspiring Health Data Scientist Passionate about Using Data
+      to Improve Healthcare and Public Health Decisions
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn primary">Contact Me</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<section class="section card">
+  <h2>About</h2>
+  <p>
+  
+    I am a Health Data Science student passionate about using data 
+    to solve complex clinical and healthcare challenges. My training 
+    focuses on the intersection of statistical modeling and machine learning, 
+    with a particular interest in translating high dimensional datasets into actionable insights.
+
+    I have developed a strong foundation in predictive modeling and clinical informatics 
+    to help improve patient outcomes and hospital efficiency. My goal is to bridge the gap 
+    between technical data architecture and clinical decision support, 
+    ensuring that healthcare interventions are evidence-based and built for real-world impact.
+    
+  </p>
+</section>
+
+<section class="section card">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <span>Python</span>
+    <span>R</span>
+    <span>SAS/SQL</span>
+    <span>Machine Learning</span>
+    <span>Statistical Analysis</span>
+    <span>Data Wrangling</span>
+    <span>Data Visualisation</span>
+    <span>Dashboards</span>
+    <span>Storytelling</span>
+
+   
+  </div>
+</section>
+
+<section class="section card">
+  <h2>Currently Involved Research</h2>
+
+  <div class="research-block">
+    <h3>Dissertation - Road Safety Project</h3>
+    
+    <p>
+      Contributing to a collaborative road safety research project focused on
+      analysing traffic incident data to identify risk patterns and support
+      evidence-based transport policy decisions.
+    </p>
+
+    <ul class="research-list">
+      <li>Cleaning and integrating multisource traffic datasets</li>
+      <li>Exploring spatial and temporal crash patterns</li>
+      <li>Supporting evaluation of road safety interventions</li>
+      <li>Collaborating with transport and public health researchers</li>
+    </ul>
+
+    <p class="research-note">
+      <em>Project details are restricted due to data sensitivity.</em>
+    </p>
+  </div>
+</section>
+
+<section class="section card">
+  <h2>Project</h2>
+
+  <div class="course">
+    <p class="course-meta">
+      Prediction of Breast Cancer Tumours Project
+    </p>
+    <ul class="research-list">
+       <li>Performed exploratory data analysis (EDA) to uncover patterns in tumour characteristics, 
+        patient demographics, and diagnostic outcomes, identifying key risk factors.</li>
+      
+       <li>Engineered features and implemented a predictive model pipeline (e.g. logistic regression, ANN (Artificial Neural Network)) 
+        to classify tumour malignancy and predict patient risk, 
+        achieving robust performance validated through cross validation and hyperparameter tuning.</li>
+ 
+       <li>Evaluated the best performance model by using the classification report and confusion matrix, 
+        and visualised results by applying seaborn and matplotlib.</li>
+
+       <li>Integrated predictive outputs and visualisations into the structured workflow, supporting reproducible risk assessment 
+        and evidence-based decision-making.</li>
+
+       <li>Translated results into dashboards or charts for different audiences, 
+        highlighting tumor malignancy trends and patient risk profiles.</li>
+    </ul>
+    </div>
+
+  <div class="course">
+    <p class="course-meta">
+     COVID-19 Survey Data on Demographics and Mental Health in Canada Project
+     <ul class="research-list">
+       <li>Data collected from a subsample dataset derived from the Flatten COVID-19 Survey, 
+        an initiative hosted on PhysioNet by the Canadian nonprofit Flatten. The analysis centered on responses from Ontario residents, 
+        aiming to provide insights into how local populations experienced and responded to the first wave of the COVID-19 pandemic.</li>
+
+       <li>Collaborated with peer students to develop an interactive HTML dashboard featuring an interactive map 
+        and a Mental Health Impact Explorer, 
+        enabling users to explore geographic and demographic patterns in mental health outcomes.</li>
+
+       <li>Implemented dynamic visualisations to allow users to filter, compare, 
+        and analyse mental health indicators across regions and populations.</li>
+
+       <li>Designed user friendly interfaces to translate complex health data into 
+        accessible, actionable insights for both technical and non-technical audiences. For example, it concluded that
+      across demographic strata, women in most age groups reported higher levels of impact, 
+      while males under 26 years constituted a notable exception. </li>
+    </ul>
+      
+    </p>
+  </div>
+
+  </div>
+</section>
+
+<section class="section card" id="contact">
+  <h2>Contact</h2>
+  <p>Email: bellaanalysiswork@gmail.com</p>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Bella Zhou</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="">
+</div>
+
+<!-- SCROLL ANIMATION -->
+<script>
+const sections = document.querySelectorAll(".section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.1 });
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+<!-- LIGHTBOX SCRIPT -->
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = lightbox.querySelector("img");
+
+document.querySelectorAll(".clickable").forEach(img => {
+  img.onclick = () => {
+    lightboxImg.src = img.src;
+    lightbox.classList.add("visible");
+  };
+});
+
+lightbox.onclick = () => lightbox.classList.remove("visible");
+</script>
+
+<!-- HERO BACKGROUND -->
+<script src="background.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
